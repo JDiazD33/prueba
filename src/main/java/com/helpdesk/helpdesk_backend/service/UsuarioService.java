@@ -17,6 +17,8 @@ public interface UsuarioService {
     // Métodos Custom
     Optional<Usuario> buscarPorEmail(String email);
     boolean existeEmail(String email);
+
+    
     List<Usuario> listarPorEmpresa(Long empresaId);
     List<Usuario> listarPorRol(Long rolId);
     List<Usuario> listarActivosPorEmpresa(Long empresaId, boolean activo);
