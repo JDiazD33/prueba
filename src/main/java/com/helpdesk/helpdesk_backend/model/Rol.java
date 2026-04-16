@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table (name = "roles")
+@Table (name = "rol")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Builder
@@ -12,8 +12,10 @@ public class Rol {
   
     @Id 
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @Column(nullable = false, unique = true)
+    /*Le agregue length 20 para evitar el tamaño por defecto */
+    @Column(nullable = false, unique = true, length = 20)
     private String nombre;
+
 }
