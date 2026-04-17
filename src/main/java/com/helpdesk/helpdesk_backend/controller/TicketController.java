@@ -1,8 +1,6 @@
 package com.helpdesk.helpdesk_backend.controller;
 
 import com.helpdesk.helpdesk_backend.model.Ticket;
-import com.helpdesk.helpdesk_backend.model.enums.EstadoTicket;
-import com.helpdesk.helpdesk_backend.model.enums.PrioridadTicket;
 import com.helpdesk.helpdesk_backend.service.TicketService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tickets")
 public class TicketController {
-
+    
     private final TicketService ticketService;
 
     public TicketController(TicketService ticketService) {
